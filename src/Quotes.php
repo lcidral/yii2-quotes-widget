@@ -2,7 +2,7 @@
 /**
  * @link https://github.com/lcidral/yii2-quotes-widget
  */
-namespace lcidral;
+namespace lcidral\yii2\widget;
 
 use yii\base\InvalidConfigException;
 use yii\base\Widget;

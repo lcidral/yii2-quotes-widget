@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "lcidral\\yii2-quotes-widget\\": "src/"
+            "lcidral\\yii2\\widget": "src/"
         }
     }
 }
