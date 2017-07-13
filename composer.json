@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "lcidral\\widgets": "src/widgets/"
+            "lcidral\\widgets\\": "src/widgets/"
         }
     }
 }
