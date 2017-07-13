@@ -1,0 +1,27 @@
+{
+    "name": "lcidral/yii2-quotes-widget",
+    "description": "A simple extension to display messages",
+	"keywords": ["yii", "quotes"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leonardo Cidral",
+            "email": "lcidral@gmail.com",
+            "homepage": "http://leonardo.saochico.com/"
+        }
+    ],
+	"support": {
+		"issues": "https://github.com/lcidral/yii2-quotes/issues",
+		"source": "https://github.com/lcidral/yii2-quotes"
+	},
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "lcidral\\yii2-quotes-widget\\": "src/"
+        }
+    }
+}
