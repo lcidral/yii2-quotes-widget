@@ -12,8 +12,8 @@
         }
     ],
 	"support": {
-		"issues": "https://github.com/lcidral/yii2-quotes/issues",
-		"source": "https://github.com/lcidral/yii2-quotes"
+		"issues": "https://github.com/lcidral/yii2-quotes-widget/issues",
+		"source": "https://github.com/lcidral/yii2-quotes-widget"
 	},
     "require": {
         "php": ">=5.4.0",
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "lcidral\\yii2\\widget": "src/"
+            "lcidral\\widgets": "src/widgets/"
         }
     }
 }

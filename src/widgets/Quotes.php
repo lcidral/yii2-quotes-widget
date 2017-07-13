@@ -2,7 +2,7 @@
 /**
  * @link https://github.com/lcidral/yii2-quotes-widget
  */
-namespace lcidral;
+namespace lcidral\quotes;
 
 use yii\base\InvalidConfigException;
 use yii\base\Widget;
@@ -30,8 +30,6 @@ class Quotes extends Widget
         $index = rand(0, $items);
         $quote = $quotes[$index];
 
-        return $this->render('quote',[
-            'quote' => $quote
-        ]);
+        print_r($quote);
     }
 }
