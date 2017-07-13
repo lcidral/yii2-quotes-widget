@@ -24,12 +24,26 @@ class Quotes extends Widget
      */
     public function run()
     {
-        $content = file_get_contents('quotes.json');
+        $content = file_get_contents(__DIR__ . '/quotes.json');
         $quotes = json_decode($content);
-        $items = count($quotes);
+        $items = count($quotes)-1;
         $index = rand(0, $items);
         $quote = $quotes[$index];
 
-        print_r($quote);
+        $colors = [
+            'red',
+            'green',
+            'blue',
+            'yellow',
+            'white',
+        ];
+        $total = count($colors)-1;
+        $color = rand(0, $total);
+
+
+        return $this->render('quote',[
+            'quote' => $quote,
+            'color' => $colors[$color]
+        ]);
     }
 }
