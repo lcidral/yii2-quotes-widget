@@ -14,11 +14,6 @@ class Quotes extends Widget
      */
     public $options = [];
 
-    public function init()
-    {
-        parent::init();
-    }
-
     /**
      * Renders the widget.
      */
@@ -31,17 +26,18 @@ class Quotes extends Widget
         $quote = $quotes[$index];
 
         $colors = [
-            'red',
-            'green',
-            'blue',
-            'yellow',
-            'white',
+            'red-card',
+            'green-card',
+            'blue-card',
+            'yellow-card',
+            'white-card',
         ];
         $total = count($colors)-1;
         $color = rand(0, $total);
 
+        QuoteAsset::register($this->getView());
 
-        return $this->render('quote',[
+        echo $this->render('quote',[
             'quote' => $quote,
             'color' => $colors[$color]
         ]);
