@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist lcidral/yii2-quotes-widget "*"
+php composer.phar require --prefer-dist lcidral/yii2-quotes-widget "dev-master"
 ```
 
 or add
 
 ```
-"lcidral/yii2-quotes-widget": "*"
+"lcidral/yii2-quotes-widget": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
