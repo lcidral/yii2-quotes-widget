@@ -21,7 +21,5 @@ class QuoteAsset extends AssetBundle
         'css/quotes.css',
     ];
 
-    public $js = [
-        'js/script.js'
-    ];
+    public $js = [];
 }
