@@ -1,8 +1,8 @@
-<blockquote class="quote-card <?= $color ?>">
+<blockquote class="quote-card <?= $quote->color ?>">
     <p>
-        <?= $quote->quoteText ?>
+        <?= $quote->text ?>
     </p>
     <cite>
-        <?= $quote->quoteAuthor ?>
+        <?= $quote->author ?>
     </cite>
 </blockquote>

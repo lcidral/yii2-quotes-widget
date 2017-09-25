@@ -17,8 +17,9 @@ use yii\web\View;
 class QuoteAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/lcidral/yii2-quotes-widget/src/assets';
+
     public $css = [
-        'css/quotes.css',
+        'css/dist/quotes.min.css',
     ];
 
     public $js = [];

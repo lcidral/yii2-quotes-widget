@@ -19,12 +19,22 @@ class Quotes extends Widget
      */
     public function run()
     {
-        $content = file_get_contents(__DIR__ . '/quotes.json');
-        $quotes = json_decode($content);
-        $items = count($quotes)-1;
-        $index = rand(0, $items);
-        $quote = $quotes[$index];
+        QuoteAsset::register($this->getView());
 
+        $color = $this->getColor();
+
+        echo $this->render('quote',[
+            'quote' => $this->getQuote($color)
+        ]);
+    }
+
+    public function getRand($subject) {
+        $total = count($subject)-1;
+        $index = rand(0, $total);
+        return $index;
+    }
+
+    public function getColor() {
         $colors = [
             'red-card',
             'green-card',
@@ -32,14 +42,18 @@ class Quotes extends Widget
             'yellow-card',
             'white-card',
         ];
-        $total = count($colors)-1;
-        $color = rand(0, $total);
+        $colorIndex = $this->getRand($colors);
+        $color = $colors[$colorIndex];
 
-        QuoteAsset::register($this->getView());
+        return $color;
+    }
 
-        echo $this->render('quote',[
-            'quote' => $quote,
-            'color' => $colors[$color]
-        ]);
+    public function getQuote($color = 'white-card') {
+        $content = file_get_contents(__DIR__ . '/quotes.json');
+        $quotes = json_decode($content);
+
+        $quotes['color'] = $color;
+
+        return $this->getRand($quotes);
     }
 }
