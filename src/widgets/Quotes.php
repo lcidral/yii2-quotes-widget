@@ -52,8 +52,9 @@ class Quotes extends Widget
         $content = file_get_contents(__DIR__ . '/quotes.json');
         $quotes = json_decode($content);
 
-        $quotes['color'] = $color;
+        $quote = $this->getRand($quotes);
+        $quote['color'] = $color;
 
-        return $this->getRand($quotes);
+        return $quote;
     }
 }
