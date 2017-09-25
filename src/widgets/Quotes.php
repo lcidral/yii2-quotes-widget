@@ -54,7 +54,7 @@ class Quotes extends Widget
 
         $index = $this->getRand($quotes);
         $quote = $quotes[$index];
-        $quote->color = $color;
+        $quote['color'] = $color;
 
         return $quote;
     }
